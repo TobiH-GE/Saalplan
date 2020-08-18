@@ -7,8 +7,43 @@ namespace Schauspielhaus
         Veranstaltung Veranstaltung;
         Spielstätte Spielstätte;
         Platz[] AllePlaetze;
+
+        public void istFrei()
+        {
+
+        }
+        public void reservieren()
+        {
+
+        }
+        public void getSpielstätte()
+        {
+
+        }
+        public void setSpielstätte()
+        {
+
+        }
+        public void getVeranstaltung()
+        {
+
+        }
+        public void setVeranstaltung()
+        {
+
+
+        }
+        public void getPlaetze()
+        {
+
+        }
+        public void setPlaetze()
+        {
+
+
+        }
     }
-    class Veranstaltung
+        class Veranstaltung
     {
         string Name;
         double Datum;
@@ -32,6 +67,15 @@ namespace Schauspielhaus
     class Veranstaltungsplan
     {
         Saalplan Saalplan;
+
+        public void getSaalplan()
+        {
+
+        }
+        public void setSaalplan()
+        {
+
+        }
     }
     class Program
     {
