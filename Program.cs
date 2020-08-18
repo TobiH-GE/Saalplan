@@ -16,11 +16,11 @@ namespace Schauspielhaus
         {
 
         }
-        public void getSpielstätte()
+        public void getSpielstaette()
         {
 
         }
-        public void setSpielstätte()
+        public void setSpielstaette()
         {
 
         }
