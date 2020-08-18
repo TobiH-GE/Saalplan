@@ -1,11 +1,12 @@
 ﻿using System;
 
-namespace Saalplan
+namespace Schauspielhaus
 {
     class Saalplan
     {
         Veranstaltung Veranstaltung;
         Spielstätte Spielstätte;
+        Platz[] AllePlaetze;
     }
     class Veranstaltung
     {
@@ -22,6 +23,11 @@ namespace Saalplan
     {
         int Nummer;
         int Reihe;
+
+        public void bestaetigt()
+        {
+            
+        }
     }
     class Veranstaltungsplan
     {
