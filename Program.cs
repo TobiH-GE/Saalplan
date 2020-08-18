@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Schauspielhaus
+namespace Schauspielhaus // nicht komplett, nicht funktionsfähig !!!
 {
     class Saalplan
     {
@@ -10,14 +10,14 @@ namespace Schauspielhaus
 
         public bool istFrei(Platz Platz)
         {
-            if (Platz.bestaetigt())
+            if (Platz.bestaetigt() != 0)
                 return false;
             else
                 return true;
         }
         public void reservieren(Platz Platz)
         {
-
+            
         }
         public Spielstätte getSpielstaette()
         {
@@ -60,12 +60,9 @@ namespace Schauspielhaus
         int Nummer;
         int Reihe;
 
-        public bool bestaetigt()
+        public int bestaetigt()
         {
-            if (Nummer != 0)
-                return true;
-            else
-                return false;
+            return Nummer;
         }
     }
     class Veranstaltungsplan
@@ -86,6 +83,8 @@ namespace Schauspielhaus
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            Platz NeuerPlatz = new Platz();
         }
     }
 }
