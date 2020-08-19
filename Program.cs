@@ -87,18 +87,22 @@ namespace Schauspielhaus // nicht komplett, nicht funktionsfähig !!!
 
             const int MaxPlaene = 100;
 
+            // array für alle Pläne
             Veranstaltungsplan[] AlleVeranstaltungsplaene = new Veranstaltungsplan[MaxPlaene];
 
+            // neuen Plan an Index 0 erstellen
             AlleVeranstaltungsplaene[0] = new Veranstaltungsplan();
 
+            // neuen Saalplan erstellen
             Saalplan NeuerSaalplan = new Saalplan();
+
             Veranstaltung NeueVeranstaltung = new Veranstaltung();
             Spielstätte NeueSpielstaette = new Spielstätte();
             Platz NeuerPlatz = new Platz();
 
-            NeuerSaalplan.setPlaetze(NeuerPlatz);
             NeuerSaalplan.setVeranstaltung(NeueVeranstaltung);
             NeuerSaalplan.setSpielstaette(NeueSpielstaette);
+            NeuerSaalplan.setPlaetze(NeuerPlatz);
             AlleVeranstaltungsplaene[0].setSaalplan(NeuerSaalplan);         
         }
     }
