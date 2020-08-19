@@ -2,6 +2,19 @@
 
 namespace Schauspielhaus // nicht komplett, nicht funktionsfähig !!!
 {
+    class Veranstaltungsplan
+    {
+        Saalplan[] Saalplaene;
+
+        public Saalplan getSaalplan()
+        {
+            return Saalplaene[0];
+        }
+        public void setSaalplan(Saalplan Saalplan)
+        {
+
+        }
+    }
     class Saalplan
     {
         Veranstaltung Veranstaltung;
@@ -39,9 +52,9 @@ namespace Schauspielhaus // nicht komplett, nicht funktionsfähig !!!
         {
             return AllePlaetze;
         }
-        public void setPlaetze(Platz[] AllePlaetze)
+        public void setPlaetze(Platz EinPlaetz)
         {
-            this.AllePlaetze = AllePlaetze;
+            this.AllePlaetze[0] = EinPlaetz;
         }
     }
     class Veranstaltung
@@ -65,26 +78,28 @@ namespace Schauspielhaus // nicht komplett, nicht funktionsfähig !!!
             return Nummer;
         }
     }
-    class Veranstaltungsplan
-    {
-        Saalplan Saalplan;
-
-        public Saalplan getSaalplan()
-        {
-            return Saalplan;
-        }
-        public void setSaalplan(Saalplan Saalplan)
-        {
-            this.Saalplan = Saalplan;
-        }
-    }
+    
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Veranstaltung!");
 
+            const int MaxPlaene = 100;
+
+            Veranstaltungsplan[] AlleVeranstaltungsplaene = new Veranstaltungsplan[MaxPlaene];
+
+            AlleVeranstaltungsplaene[0] = new Veranstaltungsplan();
+
+            Saalplan NeuerSaalplan = new Saalplan();
+            Veranstaltung NeueVeranstaltung = new Veranstaltung();
+            Spielstätte NeueSpielstaette = new Spielstätte();
             Platz NeuerPlatz = new Platz();
+
+            NeuerSaalplan.setPlaetze(NeuerPlatz);
+            NeuerSaalplan.setVeranstaltung(NeueVeranstaltung);
+            NeuerSaalplan.setSpielstaette(NeueSpielstaette);
+            AlleVeranstaltungsplaene[0].setSaalplan(NeuerSaalplan);         
         }
     }
 }
